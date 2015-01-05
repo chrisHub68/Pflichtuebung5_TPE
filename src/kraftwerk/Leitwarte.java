@@ -2,6 +2,22 @@ package kraftwerk;
 
 public class Leitwarte {
 	
-	public final static int CRITICALTEMP = 2878;
+	private final static int CRITICALTEMP = 2878;
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//Ausgabe der Temperaturen
+	private void printTemperature(int tr , int tf){
+		
+		System.out.println("Temperatur Reaktor :" +tr+ ", Temperatur Rückfluss in Rhein: " +tf);
+	}
 }

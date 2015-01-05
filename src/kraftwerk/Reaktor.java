@@ -2,7 +2,7 @@ package kraftwerk;
 
 public class Reaktor implements Runnable {
 
-	
+	//Temperatur des Reaktors in Grad Celsius
 	private int temperature = 10;
 	
 	@Override
