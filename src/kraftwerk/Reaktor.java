@@ -3,27 +3,20 @@ package kraftwerk;
 public class Reaktor implements Runnable {
 
 	//Temperatur des Reaktors in Grad Celsius
-	private int temperature = 10;
+	public int temperature;
+	
+	
 	
 	@Override
 	public void run() {
-		
+		temperature =10;
+	
 		while(true){
-			temperature++;
+			
 		}
 	}
 	
-	
-	
-	public int getTemperature(){
-		return this.temperature;
-	}
-	
-	private void setTemperature(int temperature){
-		this.temperature = temperature;
-	}
-	
-	
+
 }
 
 
