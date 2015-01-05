@@ -1,5 +1,11 @@
 package kraftwerk;
 
-public class Pumpe {
+public class Pumpe implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
