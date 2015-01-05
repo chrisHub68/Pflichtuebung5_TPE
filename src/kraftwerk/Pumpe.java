@@ -1,4 +1,4 @@
-package Kraftwerk;
+package kraftwerk;
 
 public class Pumpe {
 
