@@ -1,6 +1,6 @@
 package kraftwerk;
 
-public class Kuehlkreislauf {
+public class CoolingCircuit {
 
 	
 	private int[] watercircle = new int[12];
@@ -8,7 +8,7 @@ public class Kuehlkreislauf {
 	int pointerB;
 	
 	//Konstruktor
-	public Kuehlkreislauf(){
+	public CoolingCircuit(){
 		this.pointerA = 0;
 		this.pointerB = 6;
 		fill();

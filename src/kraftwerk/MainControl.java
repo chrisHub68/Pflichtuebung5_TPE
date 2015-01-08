@@ -1,6 +1,6 @@
 package kraftwerk;
 
-public class Leitwarte {
+public class MainControl {
 	
 	private final static int CRITICALTEMP = 2878;
 	
@@ -8,9 +8,9 @@ public class Leitwarte {
 	
     public void start(){
     	
-    Kuehlkreislauf A = new Kuehlkreislauf();
-    Thread pumpe = new Thread(new Pumpe());
-    Thread reaktor = new Thread(new Reaktor());
+    CoolingCircuit A = new CoolingCircuit();
+    Thread pumpe = new Thread(new Pump());
+    Thread reaktor = new Thread(new Reactor());
     }
 
     

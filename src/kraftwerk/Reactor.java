@@ -1,6 +1,6 @@
 package kraftwerk;
 
-public class Reaktor implements Runnable {
+public class Reactor implements Runnable {
 
 	//Temperatur des Reaktors in Grad Celsius
 	public int temperature;

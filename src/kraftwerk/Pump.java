@@ -1,6 +1,6 @@
 package kraftwerk;
 
-public class Pumpe implements Runnable {
+public class Pump implements Runnable {
 
 	
 	//Pumpleistung in Liter pro Sekunde
