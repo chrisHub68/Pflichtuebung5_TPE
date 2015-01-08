@@ -16,8 +16,8 @@ public class MainControl {
     
     public void start(){
     	
-    CoolingCircuit A = new CoolingCircuit(10);
-    Thread pump = new Thread(new Pump());
+    CoolingCircuit A = new CoolingCircuit(WATER_START_TEMP);
+    Thread pump = new Thread(new Pump(PUMP_SPEED,A));
     Thread reactor = new Thread(new Reactor(REACTOR_START_TEMP));
     pump.start();
     reactor.start();
@@ -33,7 +33,7 @@ public class MainControl {
 	//Ausgabe der Temperaturen
 	private void printTemperature(int tr , int tf){
 		
-		System.out.println("Temperatur Reaktor :" +tr+ ", Temperatur Rückfluss in Rhein: " +tf);
+		System.out.println("Temperatur Reaktor :" +tr+ ", Temperatur Rï¿½ckfluss in Rhein: " +tf);
 	}
 }
 

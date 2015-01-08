@@ -5,12 +5,16 @@ public class Pump implements Runnable {
 	
 	//Pumpleistung in Liter pro Sekunde
 	private int performance = 0;
+	private CoolingCircuit a; 
 	
+	public Pump(int performance, CoolingCircuit coolingcircuit){
+		this.performance=performance;
+		this.a = coolingcircuit;
+	}
 	
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
-		
+		a.rotate();
 	}
 
 	

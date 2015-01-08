@@ -4,8 +4,8 @@ public class CoolingCircuit {
 
 	
 	private Waterelement[] watercircle = new Waterelement[12];
-	int pointerA;
-	int pointerB;
+	private int pointerA;
+	private int pointerB;
 	
 	
 	
@@ -25,6 +25,20 @@ public class CoolingCircuit {
 	}
 	
 	
+	public void rotate(){
+		 if(this.pointerA == 11){
+			 this.pointerA = 0;
+		 }else{
+			 pointerA++;
+		 }
+			 
+		 if(this.pointerB == 11){
+			 this.pointerB = 0;
+		 }else{
+			 pointerB++;
+		 }
+	}
+
 
 	
 }

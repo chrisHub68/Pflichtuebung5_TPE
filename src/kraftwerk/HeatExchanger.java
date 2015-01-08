@@ -1,6 +1,6 @@
 package kraftwerk;
 
-public class HeatExchangers {
+public class HeatExchanger {
 
 	
 	

@@ -2,7 +2,7 @@ package kraftwerk;
 
 public class Reactor extends HasTemperature implements Runnable {
 
-	public Reactor(int temp) {
+	public Reactor(int temp ) {
 		super(temp);
 	}
 
