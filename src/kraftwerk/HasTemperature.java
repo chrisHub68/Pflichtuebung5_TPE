@@ -1,10 +1,19 @@
 package kraftwerk;
 
-public interface HasTemperature {
-	
-	//ändern der Temperatur
-	public void changeTemp(int a);
-	
-	//abfragen der Temperatur
-	public int getTemp(int a);
+public abstract class HasTemperature {
+    
+    private volatile int temperature;
+    
+    public HasTemperature(int temp){
+        temperature = temp;
+    }
+    
+    public int getTemperature(){
+        return temperature;
+    }
+    
+    public void setTemperature(int temp){
+        this.temperature = temp;
+    }
+
 }

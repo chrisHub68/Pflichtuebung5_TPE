@@ -1,25 +1,15 @@
 package kraftwerk;
 
-public class Waterelement implements HasTemperature{
+public class Waterelement extends HasTemperature{
+
+	public Waterelement(int temp) {
+		super(temp);
+		// TODO Auto-generated constructor stub
+	}
 	
-	private int temperature;
+
 
 	
-	public Waterelement(int temperature){
-		this.temperature = temperature;
-	}
-	
-	@Override
-	public void changeTemp(int temperature) {
-		this.temperature = temperature;
-	
-		
-	}
-
-	@Override
-	public int getTemp(int a) {
-		return this.temperature;
-	}
 
 	
 }
