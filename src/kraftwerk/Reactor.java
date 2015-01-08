@@ -2,22 +2,42 @@ package kraftwerk;
 
 public class Reactor extends HasTemperature implements Runnable {
 
-	public Reactor(int temp ) {
+
+
+	public Reactor(int temp , int cooeficent) {
 		super(temp);
 	}
 
 
 
-	//Temperatur des Reaktors in Grad Celsius
-	private int temperature;
 	
 	
 	
 	@Override
 	public void run() {
-		temperature =10;
-		while(true){
-			
+		{
+
+			synchronized (MainControl.LOCK) {
+
+				try {
+
+					for (int i = 0; i < performance; i++) {
+						getTemperature()++;
+					}
+
+					MainControl.LOCK.wait(1000 / cooeficent);
+
+					if (waterpumped >= 100) {
+						a.rotate();
+						exchange();
+						waterpumped -= 100;
+					}
+				} catch (InterruptedException e) {
+					Thread.currentThread().interrupt();
+				}
+
+			}
+		}
 		}
 	}
 	

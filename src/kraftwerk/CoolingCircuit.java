@@ -39,6 +39,13 @@ public class CoolingCircuit {
 		 }
 	}
 
-
+	public int getPointerA(){
+		return this.pointerA;
+	}
 	
+	
+	
+	public int getPointerB(){
+		return this.pointerB;
+	}
 }

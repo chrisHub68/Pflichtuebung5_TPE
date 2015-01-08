@@ -31,6 +31,7 @@ public class Pump implements Runnable {
 
 					if (waterpumped >= 100) {
 						a.rotate();
+						exchange();
 						waterpumped -= 100;
 					}
 				} catch (InterruptedException e) {
@@ -48,6 +49,10 @@ public class Pump implements Runnable {
 
 	public void setPerformance(int performance) {
 		this.performance = performance;
+	}
+	
+	private void exchange(){
+		
 	}
 
 }
