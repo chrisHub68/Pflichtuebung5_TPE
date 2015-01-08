@@ -1,9 +1,25 @@
 package kraftwerk;
 
-public class Waterelement {
+public class Waterelement implements HasTemperature{
 	
-	int temperature;
+	private int temperature;
 
 	
+	public Waterelement(int temperature){
+		this.temperature = temperature;
+	}
+	
+	@Override
+	public void changeTemp(int temperature) {
+		this.temperature = temperature;
+	
+		
+	}
+
+	@Override
+	public int getTemp(int a) {
+		return this.temperature;
+	}
+
 	
 }

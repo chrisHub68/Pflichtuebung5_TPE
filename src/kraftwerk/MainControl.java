@@ -8,7 +8,7 @@ public class MainControl {
 	
     public void start(){
     	
-    CoolingCircuit A = new CoolingCircuit();
+    CoolingCircuit A = new CoolingCircuit(10);
     Thread pumpe = new Thread(new Pump());
     Thread reaktor = new Thread(new Reactor());
     }

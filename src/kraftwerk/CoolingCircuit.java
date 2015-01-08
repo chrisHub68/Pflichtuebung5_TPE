@@ -3,22 +3,24 @@ package kraftwerk;
 public class CoolingCircuit {
 
 	
-	private int[] watercircle = new int[12];
+	private Waterelement[] watercircle = new Waterelement[12];
 	int pointerA;
 	int pointerB;
 	
+	
+	
 	//Konstruktor
-	public CoolingCircuit(){
+	public CoolingCircuit(int temperature){
 		this.pointerA = 0;
 		this.pointerB = 6;
-		fill();
+		fill(temperature);
 	}
 	
 	
 	
-	private void fill(){
+	private void fill(int temperature){
 		for (int i = 0; i < watercircle.length; i++) {
-			watercircle[i]=10;
+			watercircle[i] = new Waterelement(temperature);
 		}
 	}
 	
