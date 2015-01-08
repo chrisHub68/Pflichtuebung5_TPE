@@ -6,6 +6,7 @@ public class MainControl {
 	private static final int REACTOR_START_TEMP = 0; 
     private static final int REACTOR_HEAT_COEFFICIENT = 42;
     private static final int PUMP_SPEED = 1;
+    private static final int PUMP_COEFFICENT = 1;
     private static final int WATER_START_TEMP = 10; 
     private static final int WATER_CYCLE_SIZE = 12; 
     private static final int REACTOR_POS = 0; 
@@ -17,14 +18,14 @@ public class MainControl {
     public void start(){
     	
     CoolingCircuit A = new CoolingCircuit(WATER_START_TEMP);
-    Thread pump = new Thread(new Pump(PUMP_SPEED,A));
+    Thread pump = new Thread(new Pump(PUMP_SPEED,A,PUMP_COEFFICENT));
     Thread reactor = new Thread(new Reactor(REACTOR_START_TEMP));
     pump.start();
     reactor.start();
     
-    reactor.sleep(1000);
+  
     
-    //ToDo
+   
     
     }
 
