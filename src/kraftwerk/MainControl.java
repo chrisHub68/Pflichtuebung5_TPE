@@ -9,17 +9,16 @@ public class MainControl {
     private static final int PUMP_COEFFICENT = 1;
     private static final int WATER_START_TEMP = 10; 
     private static final int WATER_CYCLE_SIZE = 12; 
-    private static final int REACTOR_POS = 0; 
-    private static final int RIVER_POS = 5;
     private static final int RIVER_START_TEMP = 10;
     public static final Object LOCK = new Object();
 	
-    
+    private int riverTemp = WATER_START_TEMP;
+    		
     public void start(){
     	
     CoolingCircuit A = new CoolingCircuit(WATER_START_TEMP);
     Thread pump = new Thread(new Pump(PUMP_SPEED,A,PUMP_COEFFICENT));
-    Thread reactor = new Thread(new Reactor(REACTOR_START_TEMP));
+    Thread reactor = new Thread(new Reactor(REACTOR_START_TEMP,REACTOR_HEAT_COEFFICIENT));
     pump.start();
     reactor.start();
     
@@ -30,6 +29,7 @@ public class MainControl {
     }
 
     
+    
 	
 	//Ausgabe der Temperaturen
 	private void printTemperature(int tr , int tf){
@@ -39,6 +39,3 @@ public class MainControl {
 }
 
 
-
-// wartezeit 1000/pump
-//
