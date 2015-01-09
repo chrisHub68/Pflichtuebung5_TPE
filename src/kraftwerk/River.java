@@ -2,8 +2,12 @@ package kraftwerk;
 
 public class River extends HasTemperature {
 
-	public River(int temp) {
+	private MainControl mc;
+
+
+	public River(int temp,MainControl mc) {
 		super(temp);
+		this.mc = mc;
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -15,10 +19,10 @@ public class River extends HasTemperature {
     }
     
 	
-	// wenn die TEmperatur geändert wird wird diese an die Leitwarte weitergeleitet;
+	// wenn die TEmperatur geï¿½ndert wird wird diese an die Leitwarte weitergeleitet;
 	@Override
     public void setTemperature(int temp){
-       //todo
+       mc.onRiverTempChange(temp);
     }
 
 }
