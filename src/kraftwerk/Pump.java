@@ -27,26 +27,26 @@ public class Pump implements Runnable {
 
 		while (!Thread.currentThread().isInterrupted()) {
 
-			synchronized (MainControl.LOCK) {
+			//synchronized (MainControl.LOCK) {
 
-				try {
+				//try {
 
 					for (int i = 0; i < performance; i++) {
 						waterpumped++;
 					}
 
-					MainControl.LOCK.wait(1000 / cooeficent);
+				//	MainControl.LOCK.wait(1000 / cooeficent);
 
 					if (waterpumped >= 100) {
 						a.rotate();
 						exchange();
 						waterpumped -= 100;
 					}
-				} catch (InterruptedException e) {
-					Thread.currentThread().interrupt();
-				}
+				//} catch (InterruptedException e) {
+				//	Thread.currentThread().interrupt();
+			//	}
 
-			}
+			//}
 		}
 
 	}

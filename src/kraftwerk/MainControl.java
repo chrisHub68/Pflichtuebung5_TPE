@@ -28,16 +28,17 @@ public class MainControl {
     Thread pump = new Thread(new Pump(PUMP_SPEED,A,PUMP_COEFFICENT,riExchange,reExchange,this));
     Thread reactorT = new Thread(reactor);
     
- 
     pump.start();
     reactorT.start();
+    
+   
     
     try{
     	
     
     Thread.sleep(20000);
     }catch (InterruptedException e) {
-		Thread.currentThread().interrupt();
+    	 e.printStackTrace();
     
     }
     
