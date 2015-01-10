@@ -13,6 +13,9 @@ public class RiverExchanger {
 	
 	public void exchange(){
 		
-		int resolution =  (circuit.getPointerB() + river.getTemperature()) /2;
+		int result =  (circuit.getWaterelement(circuit.getPointerB()).getTemperature() + river.getTemperature()) /2;
+		river.setTemperature(result);
+		circuit.getWaterelement(circuit.getPointerB()).setTemperature(result);
+		
 	}
 }

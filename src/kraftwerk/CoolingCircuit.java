@@ -48,4 +48,8 @@ public class CoolingCircuit {
 	public int getPointerB(){
 		return this.pointerB;
 	}
+	
+	public Waterelement getWaterelement(int position){
+		return this.watercircle[position];
+	}
 }
