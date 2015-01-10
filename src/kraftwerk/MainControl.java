@@ -32,8 +32,14 @@ public class MainControl {
     pump.start();
     reactorT.start();
     
-
+    try{
+    	
     
+    this.wait(20000);
+    }catch (InterruptedException e) {
+		Thread.currentThread().interrupt();
+    
+    }
     }
     
   

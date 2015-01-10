@@ -6,7 +6,7 @@ public class NuclearMain {
 		MainControl mc = new MainControl();
 		System.out.println("Start");
 		mc.start();
-
+		
 	}
 
 }
