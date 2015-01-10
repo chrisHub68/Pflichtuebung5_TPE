@@ -13,6 +13,7 @@ public class MainControl {
     public static final Object LOCK = new Object();
 	
     private int riverTemp = WATER_START_TEMP;
+    private int reactorTemp = REACTOR_START_TEMP;
     		
     public void start(){
     
@@ -47,6 +48,13 @@ public class MainControl {
 	public void onRiverTempChange(int temp) {
 		this.riverTemp=temp;
 	}
+	
+	
+	
+	public void onReactorTempChange(int temp){
+		this.reactorTemp =temp;
+	}
 }
+
 
 
