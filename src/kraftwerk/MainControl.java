@@ -8,31 +8,35 @@ public class MainControl {
     private static final int PUMP_SPEED = 1;
     private static final int PUMP_COEFFICENT = 1;
     private static final int WATER_START_TEMP = 10; 
-    private static final int WATER_CYCLE_SIZE = 12; 
     private static final int RIVER_START_TEMP = 10;
     public static final Object LOCK = new Object();
 	
+    
+  
+	
+
     private int riverTemp = WATER_START_TEMP;
     private int reactorTemp = REACTOR_START_TEMP;
     		
     public void start(){
-    
-    ReactorTemp reactortemp = new ReactorTemp(REACTOR_START_TEMP, this);
+    	
+    Reactor reactor = new Reactor(REACTOR_START_TEMP,REACTOR_HEAT_COEFFICIENT,this);
     River river = new River(WATER_START_TEMP,this);
     CoolingCircuit A = new CoolingCircuit(WATER_START_TEMP);
     RiverExchanger riExchange = new RiverExchanger(A ,river);
-    ReactorExchanger reExchange = new ReactorExchanger(A,reactortemp);
+    ReactorExchanger reExchange = new ReactorExchanger(A,reactor,this);
     Thread pump = new Thread(new Pump(PUMP_SPEED,A,PUMP_COEFFICENT,riExchange,reExchange,this));
-    Thread reactor = new Thread(new Reactor(REACTOR_START_TEMP,REACTOR_HEAT_COEFFICIENT));
+    Thread reactorT = new Thread(reactor);
     
+ 
     pump.start();
-    reactor.start();
+    reactorT.start();
     
-  
-    
-   
+
     
     }
+    
+  
 
     
     
@@ -55,6 +59,8 @@ public class MainControl {
 	public void onReactorTempChange(int temp){
 		this.reactorTemp =temp;
 	}
+	
+   
 }
 
 

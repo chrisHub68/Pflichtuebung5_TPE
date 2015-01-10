@@ -3,20 +3,22 @@ package kraftwerk;
 public class ReactorExchanger {
 
 	CoolingCircuit circuit;
-	ReactorTemp reTemp;
+	Reactor reactor;
+	MainControl mc;
 	
-	public  ReactorExchanger(CoolingCircuit circuit,ReactorTemp reTemp){
+	public  ReactorExchanger(CoolingCircuit circuit,Reactor reactor,MainControl mc){
 		
 		this.circuit=circuit;
-		this.reTemp=reTemp;
+		this.reactor=reactor;
+		this.mc=mc;
 	}
 	
 	
 	public void exchange(){
 		
-		int result =  (circuit.getWaterelement(circuit.getPointerA()).getTemperature() + reTemp.getTemperature()) /2;
-		reTemp.setTemperature(result);
+		int result =  (circuit.getWaterelement(circuit.getPointerA()).getTemperature() + reactor.getTemperature()) /2;
+		reactor.setTemperature(result);
 		circuit.getWaterelement(circuit.getPointerB()).setTemperature(result);
-		
+		mc.onReactorTempChange(result);
 	}
 }

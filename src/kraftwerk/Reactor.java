@@ -2,10 +2,13 @@ package kraftwerk;
 
 public class Reactor extends HasTemperature implements Runnable {
 
+	int cooeficent =0;
+	MainControl mc;
 
-
-	public Reactor(int temp , int cooeficent) {
+	public Reactor(int temp , int cooeficent ,MainControl mc) {
 		super(temp);
+		this.cooeficent =cooeficent;
+		this.mc=mc;
 	}
 
 
@@ -16,22 +19,15 @@ public class Reactor extends HasTemperature implements Runnable {
 	@Override
 	public void run() {
 		{
-			/*
+			
 			synchronized (MainControl.LOCK) {
 
 				try {
-
-					for (int i = 0; i < performance; i++) {
-						getTemperature()++;
-					}
+						setTemperature(getTemperature()+1);
+					
 
 					MainControl.LOCK.wait(1000 / cooeficent);
-
-					if (waterpumped >= 100) {
-						a.rotate();
-						exchange();
-						waterpumped -= 100;
-					}
+				
 				} catch (InterruptedException e) {
 					Thread.currentThread().interrupt();
 				}
@@ -39,11 +35,12 @@ public class Reactor extends HasTemperature implements Runnable {
 			}
 		}
 		
-		*/
+		
 		}
+    
 	}
 	
-}
+
 
 
 
