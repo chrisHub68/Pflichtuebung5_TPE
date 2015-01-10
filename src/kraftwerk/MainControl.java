@@ -19,9 +19,10 @@ public class MainControl {
  
     River river = new River(WATER_START_TEMP,this);
     CoolingCircuit A = new CoolingCircuit(WATER_START_TEMP);
-    Thread pump = new Thread(new Pump(PUMP_SPEED,A,PUMP_COEFFICENT));
+    RiverExchanger riExchange = new RiverExchanger(A ,river);
+    Thread pump = new Thread(new Pump(PUMP_SPEED,A,PUMP_COEFFICENT,riExchange));
     Thread reactor = new Thread(new Reactor(REACTOR_START_TEMP,REACTOR_HEAT_COEFFICIENT));
-    RiverExchanger riExchange = new RiverExchanger(A);
+    
     pump.start();
     reactor.start();
     

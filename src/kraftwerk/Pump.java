@@ -7,11 +7,13 @@ public class Pump implements Runnable {
 	private CoolingCircuit a;
 	private int waterpumped = 0;
 	private int cooeficent = 0;
+	RiverExchanger riExchange;
 
-	public Pump(int performance, CoolingCircuit coolingcircuit, int cooeficent) {
+	public Pump(int performance, CoolingCircuit coolingcircuit, int cooeficent,RiverExchanger riExchange) {
 		this.performance = performance;
 		this.a = coolingcircuit;
 		this.cooeficent = cooeficent;
+		this.riExchange=riExchange;
 	}
 
 	@Override
@@ -52,7 +54,7 @@ public class Pump implements Runnable {
 	}
 	
 	private void exchange(){
-		
+		riExchange.exchange();
 	}
 
 }
