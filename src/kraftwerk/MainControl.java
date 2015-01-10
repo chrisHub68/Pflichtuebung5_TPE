@@ -3,8 +3,8 @@ package kraftwerk;
 public class MainControl {
  
         private final static int REACTOR_CRITICALTEMP = 2878;
-        private static final int REACTOR_START_TEMP = 0;
-        private static final int REACTOR_HEAT_COEFFICIENT = 42;
+        private static final int REACTOR_START_TEMP = 10;
+        private static final int REACTOR_HEAT_COEFFICIENT =222;
         private static final int PUMP_SPEED = 100;
         private static final int PUMP_COEFFICENT = 1;
         private static final int WATER_START_TEMP = 10;

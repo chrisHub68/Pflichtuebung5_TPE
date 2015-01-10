@@ -37,6 +37,7 @@ public class Pump implements Runnable {
                                                 exchange();
                                                 waterpumped -= 100;
                                         }
+                                        
                                         MainControl.LOCK.wait((long)(1000 / cooeficent));
                                 } catch (InterruptedException e) {
                                         Thread.currentThread().interrupt();
