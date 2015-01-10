@@ -16,7 +16,7 @@ public class Reactor extends HasTemperature implements Runnable {
 	@Override
 	public void run() {
 		{
-
+			/*
 			synchronized (MainControl.LOCK) {
 
 				try {
@@ -38,6 +38,8 @@ public class Reactor extends HasTemperature implements Runnable {
 
 			}
 		}
+		
+		*/
 		}
 	}
 	
