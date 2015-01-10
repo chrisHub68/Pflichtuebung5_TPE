@@ -17,10 +17,11 @@ public class MainControl {
     		
     public void start(){
     
- 
+    ReactorTemp reactortemp = new ReactorTemp(REACTOR_START_TEMP, this);
     River river = new River(WATER_START_TEMP,this);
     CoolingCircuit A = new CoolingCircuit(WATER_START_TEMP);
     RiverExchanger riExchange = new RiverExchanger(A ,river);
+    ReactorExchanger reExchange = new ReactorExchanger(A,reactortemp);
     Thread pump = new Thread(new Pump(PUMP_SPEED,A,PUMP_COEFFICENT,riExchange));
     Thread reactor = new Thread(new Reactor(REACTOR_START_TEMP,REACTOR_HEAT_COEFFICIENT));
     
