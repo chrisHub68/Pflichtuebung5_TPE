@@ -35,15 +35,28 @@ public class MainControl {
     try{
     	
     
-    this.wait(20000);
+    Thread.sleep(20000);
     }catch (InterruptedException e) {
 		Thread.currentThread().interrupt();
     
     }
-    }
+    
+		
+
+	       
+	         pump.interrupt();
+	         reactorT.interrupt();
+
+	       
+	         System.exit(0);
+
+	 }
+    
+    
+    
     
   
-
+    
     
     
 	
