@@ -8,9 +8,9 @@ public class Pump implements Runnable {
         private CoolingCircuit circuit;
         private int waterpumped = 0;
         private int cooeficent;
-        RiverExchanger riExchange;
-        ReactorExchanger reExchange;
-        MainControl mc;
+        private RiverExchanger riExchange;
+        private ReactorExchanger reExchange;
+        private MainControl mc;
  
         public Pump(int performance, CoolingCircuit coolingcircuit, int cooeficent,RiverExchanger riExchange,ReactorExchanger reExchange,MainControl mc) {
                 this.performance = performance;
