@@ -21,13 +21,14 @@ public class Reactor extends HasTemperature implements Runnable {
 		{
 			
 			while (!Thread.currentThread().isInterrupted()) {
+				
 			synchronized (MainControl.LOCK) {
 
 				try {
 						this.setTemperature(getTemperature()+1);
-					
+						mc.onReactorTempChange(getTemperature());
 
-					MainControl.LOCK.wait((long)1000 / cooeficent);
+					MainControl.LOCK.wait((long) (1000 / cooeficent));
 				
 				} catch (InterruptedException e) {
 					Thread.currentThread().interrupt();

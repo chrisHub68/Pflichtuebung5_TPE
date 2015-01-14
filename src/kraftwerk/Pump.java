@@ -5,7 +5,7 @@ public class Pump implements Runnable {
  
         // Pumpleistung in Liter pro Sekunde
         private int performance;
-        private CoolingCircuit a;
+        private CoolingCircuit circuit;
         private int waterpumped = 0;
         private int cooeficent;
         RiverExchanger riExchange;
@@ -14,7 +14,7 @@ public class Pump implements Runnable {
  
         public Pump(int performance, CoolingCircuit coolingcircuit, int cooeficent,RiverExchanger riExchange,ReactorExchanger reExchange,MainControl mc) {
                 this.performance = performance;
-                this.a = coolingcircuit;
+                this.circuit = coolingcircuit;
                 this.cooeficent = cooeficent;
                 this.riExchange=riExchange;
                 this.reExchange=reExchange;
@@ -33,7 +33,7 @@ public class Pump implements Runnable {
                                         waterpumped+=performance;
  
                                         if (waterpumped >= 100) {
-                                                a.rotate();
+                                                circuit.rotate();
                                                 exchange();
                                                 waterpumped -= 100;
                                         }
