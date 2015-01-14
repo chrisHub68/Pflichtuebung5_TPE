@@ -112,7 +112,8 @@ public class MainControl {
 
 		pump.interrupt();
 		reactor.interrupt();
-
+		System.out.println("\nPumpe wurde heruntergefahren");
+		System.out.println("Reaktor wurde heruntergefahren");
 		System.exit(0);
 	}
 
