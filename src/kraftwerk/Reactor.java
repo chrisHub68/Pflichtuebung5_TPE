@@ -17,7 +17,7 @@ public class Reactor extends HasTemperature implements Runnable {
 
 	@Override
 	public void run() {
-		{
+		
 			
 			while (!Thread.currentThread().isInterrupted()) {
 				
@@ -35,7 +35,7 @@ public class Reactor extends HasTemperature implements Runnable {
 
 			}
 		}
-		}
+		
 		
 		
 		}
