@@ -21,14 +21,19 @@ public class CoolingCircuit {
 	}
 	
 	
-	//erzeuge 12 Wasserelemente
+	/**
+	 * erzeuge 12 Wasserelemente
+	 * @param temperature
+	 */
 	private void fill(int temperature){
 		for (int i = 0; i < watercircle.length; i++) {
 			watercircle[i] = new Waterelement(temperature);
 		}
 	}
 	
-	//Funktion um die Rotation der WasserElemente im Wasserkeislauf zu steuern
+	/**
+	 * Funktion um die Rotation der WasserElemente im Wasserkeislauf zu steuern
+	 */
 	public void rotate(){
 		 if(this.pointerA == 11){
 			 this.pointerA = 0;

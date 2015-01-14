@@ -19,6 +19,8 @@ public class MainControl {
 	private static final int PUMP_COEFFICENT = 1;
 	// Temperatur des Rheins
 	private static final int WATER_START_TEMP = 10;
+	
+	
 
 	// Tokenobjekt für threadsicheren Ablauf im Programm
 	public static final Object LOCK = new Object();

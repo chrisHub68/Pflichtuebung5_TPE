@@ -5,8 +5,8 @@ package kraftwerk;
  */
 public class Reactor extends HasTemperature implements Runnable {
 
-	int cooeficent =0;
-	MainControl mc;
+	private int cooeficent =0;
+	private MainControl mc;
 
 	public Reactor(int temp , int cooeficent ,MainControl mc) {
 		super(temp);

@@ -5,9 +5,9 @@ package kraftwerk;
  */
 public class ReactorExchanger {
 
-	CoolingCircuit circuit;
-	Reactor reactor;
-	MainControl mc;
+	private CoolingCircuit circuit;
+	private Reactor reactor;
+	private MainControl mc;
 	
 	public  ReactorExchanger(CoolingCircuit circuit,Reactor reactor,MainControl mc){
 		
