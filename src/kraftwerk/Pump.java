@@ -1,6 +1,9 @@
 package kraftwerk;
  
- 
+/**
+ * Implementierung einer Wasserpumpe in einem Kernkraftwerk 
+ *
+ */
 public class Pump implements Runnable {
  
         // Pumpleistung in Liter pro Sekunde

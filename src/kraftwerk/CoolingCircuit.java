@@ -1,8 +1,12 @@
+/**
+ * Klasse CoolingCircuit implementiert die Funktionsweise eines Kühlkreislaufs in einem Kernkraftwerk
+ */
+
 package kraftwerk;
 
 public class CoolingCircuit {
 
-	
+	// Es gibt insgesamt 12 Wasserelemente im Wasserkreislauf
 	private Waterelement[] watercircle = new Waterelement[12];
 	private int pointerA;
 	private int pointerB;
@@ -17,14 +21,14 @@ public class CoolingCircuit {
 	}
 	
 	
-	
+	//erzeuge 12 Wasserelemente
 	private void fill(int temperature){
 		for (int i = 0; i < watercircle.length; i++) {
 			watercircle[i] = new Waterelement(temperature);
 		}
 	}
 	
-	
+	//Funktion um die Rotation der WasserElemente im Wasserkeislauf zu steuern
 	public void rotate(){
 		 if(this.pointerA == 11){
 			 this.pointerA = 0;

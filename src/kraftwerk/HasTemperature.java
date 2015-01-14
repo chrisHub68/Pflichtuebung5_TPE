@@ -1,7 +1,12 @@
+/**
+ * Klasse HasTemperature dient dazu allen Elementen die mit Temperaturen arbeiten eine Temperatur erben zu lassen
+ */
+
 package kraftwerk;
 
 public abstract class HasTemperature {
     
+	// Temperatur eines Elementes im Kernkraftwerk
     private volatile int temperature;
     
     public HasTemperature(int temp){

@@ -1,5 +1,8 @@
 package kraftwerk;
-
+/**
+ * Wärmetauscher ReactorExchanger für den Reaktor.
+ *
+ */
 public class ReactorExchanger {
 
 	CoolingCircuit circuit;
@@ -13,7 +16,9 @@ public class ReactorExchanger {
 		this.mc=mc;
 	}
 	
-	
+	/**
+	 * Wärmtetausch Methode für den Reaktor
+	 */
 	public void exchange(){
 		
 		int result =  (circuit.getWaterelement(circuit.getPointerA()).getTemperature() + reactor.getTemperature()) /2;

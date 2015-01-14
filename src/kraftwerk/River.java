@@ -1,5 +1,8 @@
 package kraftwerk;
-
+/**
+ * Die Klasse River implementiert den Fluss Rhein mit seiner Temperatur
+ *
+ */
 public class River extends HasTemperature {
 
 	private MainControl mc;

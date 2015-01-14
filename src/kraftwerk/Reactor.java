@@ -1,5 +1,8 @@
 package kraftwerk;
-
+/**
+ * Implementierung eines Reaktors in einem Kernkraftwerk
+ *
+ */
 public class Reactor extends HasTemperature implements Runnable {
 
 	int cooeficent =0;
@@ -12,10 +15,6 @@ public class Reactor extends HasTemperature implements Runnable {
 	}
 
 
-
-	
-	
-	
 	@Override
 	public void run() {
 		{

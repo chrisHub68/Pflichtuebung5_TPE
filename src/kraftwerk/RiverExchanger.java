@@ -1,5 +1,9 @@
 package kraftwerk;
-
+/**
+ * RiverExchanger ist der Wärmetauscher für den Rhein.
+ * @author h.ahmetovic
+ *
+ */
 public class RiverExchanger {
 
 	CoolingCircuit circuit;
@@ -10,7 +14,9 @@ public class RiverExchanger {
 		this.river =river;
 		
 	}
-	
+	/**
+	 * Wärmtetausch Methode für den Fluss
+	 */
 	public void exchange(){
 		
 		int result =  (circuit.getWaterelement(circuit.getPointerB()).getTemperature() + river.getTemperature()) /2;
