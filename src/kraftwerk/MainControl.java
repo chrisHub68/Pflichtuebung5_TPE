@@ -49,7 +49,15 @@ public class MainControl {
 		pump = new Thread(new Pump(PUMP_SPEED, A, PUMP_COEFFICENT, riExchange,
 				reExchange, this));
 		reactorT = new Thread(reactor);
-
+		
+		//Kontrolle
+		if(this.reactorTemp > REACTOR_CRITICALTEMP){
+			System.out.println("Der Reaktor hat seine Kritische Temperatur"
+					+ " erreicht und wird nun heruntergefahren!");
+			endProgramm(pump, reactorT);
+		}
+		
+		
 		/*
 		 * Threads starten
 		 */
